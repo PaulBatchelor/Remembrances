@@ -8,11 +8,11 @@ dup 0.8 1.1 delay 0.1 * +
 
 20 dmetro 0.5 maytrig
 3 0.1 8 tenv
-400 0.1 1 1 1 fm * 
+1013.39 0.1 1 1 1 fm * 
 +
 
 25 dmetro 0.5 maytrig
 3 0.1 8 tenv
-664.55 0.1 1 1 1 fm * 
+931.27 0.1 1 1 1 fm * 
 
 +
