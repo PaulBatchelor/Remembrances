@@ -9,7 +9,7 @@ else
 	cd ~/remembrances/rem0
 	./run_jack &
 	#jacksporth test.sp
-	jacksporth whisper.sp 
+	../bin/jsporth whisper.sp 
 fi
 
 
