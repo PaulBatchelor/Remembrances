@@ -1,0 +1,31 @@
+#!/bin/ash
+
+# disable frequency scaling
+# for cpu in /sys/devices/system/cpu/cpu[0-9]*; do echo -n performance \
+# | sudo tee $cpu/cpufreq/scaling_governor; done
+
+# things to kill
+# sudo service ntp stop
+# sudo service triggerhappy stop
+# sudo service dbus stop
+# sudo killall console-kit-daemon
+# sudo killall polkitd
+# sudo killall dbus-daemon
+# sudo killall dbus-launch
+
+
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket
+#jackd -r -dalsa -dhw:CODEC -r44100 -p1024 -n4 -s -M -P
+#jackd -r -dalsa -dhw:CODEC -r44100 -p4096 -n4 -s -M -P
+
+# sines and other simple things
+# jackd -r -dalsa -dhw:CODEC -r32000 -p512 -n4 -s -M -P
+#jackd -P70 -p16 -t2000 -dalsa -dhw:CODEC -r32000 -p512 -n3 -o1 -s -P 
+DEVICE=ALSA
+jackd -r -p16 -t2000 -dalsa -dhw:$DEVICE -r32000 -p4096 -n8 -o1 -s -P 
+
+#jackd -r -dalsa -dhw:CODEC -r32000 -p1024 -n4 -s -M -P
+
+
+#jackd -r -dalsa -dhw:CODEC -r44100 -p512 -n4 -s -M -P
+#jackd -r -dalsa -dhw:Device -r96000 -p1024 -n4 -s -M -P
