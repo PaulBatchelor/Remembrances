@@ -6,7 +6,7 @@ then
 	echo "jackd is already running. skipping startup..."
 else
 	echo "jackd is not running. starting..."
-	cd ~/remembrances/rem0
+	cd ~/remembrances/rem1
 	./run_jack &
-	jacksporth test.sp
+	../bin/jsporth whisper.sp
 fi
