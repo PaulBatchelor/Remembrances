@@ -1,0 +1,18 @@
+#!/bin/ash
+
+if [ "$#" -eq 0 ]
+then
+echo "Transfer a file to lappy bin"
+echo "Usage: transfer_bin HOST FILE"
+exit
+fi
+
+if [ "$1" == "lappy" ]
+then
+echo "Transfering to laptop"
+scp -r $2 lappy:work/255/remembrances/bin/
+else 
+echo "Transfering to $1"
+scp -r $2 $1:work/255/remembrances/bin/
+fi
+
