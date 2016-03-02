@@ -10,6 +10,3 @@ else
 	./run_jack &
 	jacksporth test.sp
 fi
-
-
-
