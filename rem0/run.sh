@@ -8,7 +8,8 @@ else
 	echo "jackd is not running. starting..."
 	cd ~/remembrances/rem0
 	./run_jack &
-	jacksporth test.sp
+	#jacksporth test.sp
+	jacksporth whisper.sp 
 fi
 
 
